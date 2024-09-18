@@ -10,7 +10,7 @@
 
 ## Description
 
-Test task for the junior frontend position at ([Lumos](https://lumos.mobi/index-ru.html)). Deadline - 12h.
+Test task for the junior frontend position at [Lumos](https://lumos.mobi/index-ru.html). Deadline - 12h.
 
 [PR link](https://github.com/GoodValts/lumos-test-task/pull/1)
 
