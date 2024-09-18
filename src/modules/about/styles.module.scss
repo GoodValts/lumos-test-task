@@ -3,13 +3,13 @@
 .section {
   max-width: 892px;
   margin: auto;
-  margin-top: 75px;
   padding: 0 16px;
+  padding-top: 147px;
   overflow: hidden;
   position: relative;
 
   @include _mobile {
-    margin-top: 10px;
+    padding-top: 82px;
   }
 }
 
