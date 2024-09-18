@@ -19,7 +19,7 @@ import Form from "@/modules/form/form";
 // });
 
 export default function Home() {
-  const [isForm, setIsForm] = useState(true);
+  const [isForm, setIsForm] = useState(false);
   const [name, setName] = useState("");
 
   return (

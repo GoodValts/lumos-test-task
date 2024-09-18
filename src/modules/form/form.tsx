@@ -22,15 +22,25 @@ export default function Form({
         onClick={() => setIsForm(false)}
       />
       <h3 className={styles.title}>Your name</h3>
-      {name ? (
-        <p className={styles.name}>{name}</p>
-      ) : (
-        <input className={styles.input} />
-      )}
+      <p className={styles.name}>{name}</p>
       <input
         className={styles.input}
         placeholder="Enter your email"
         type="email"
+        onChange={(e) => {
+          const value = e.target.value;
+          if (
+            value.includes("@") &&
+            value.split("@")[1].includes(".") &&
+            value.split("@")[1].split(".")[1].length
+          ) {
+            console.log("email value:", value);
+            setMail(value);
+          } else {
+            console.log("email value (incorrect):", value);
+            setMail("");
+          }
+        }}
       ></input>
       <div className={styles.notice}>
         <img
@@ -44,9 +54,15 @@ export default function Form({
         </p>
       </div>
       <button
-        className={styles.button}
+        className={
+          mail.length
+            ? styles.button
+            : `${styles.button} ${styles.button_disabled}`
+        }
         onClick={() => {
-          mail ? console.log("mail") : console.log("disabled button click");
+          mail
+            ? console.log("mail:", mail)
+            : console.log("disabled button click, incorrect mail");
         }}
       >
         Continue

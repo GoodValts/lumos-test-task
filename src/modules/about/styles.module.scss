@@ -14,7 +14,6 @@
 }
 
 .title {
-  font-family: "Poppins", sans-serif;
   @include _font(700, 32, 46);
   text-align: center;
   color: $colorBlack;
@@ -45,7 +44,7 @@
   width: 396px;
   max-width: 100%;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  
   @include _font(700, 24, 32);
   color: $colorWhite;
   background-color: $colorOrange;
@@ -79,7 +78,7 @@
 }
 
 .achievementsText {
-  font-family: "Poppins", sans-serif;
+  
   @include _font(400, 14, 18);
   text-align: center;
   color: $colorBlue;
@@ -126,20 +125,20 @@
 }
 
 .overviewAmount {
-  font-family: "Poppins", sans-serif;
+  
   @include _font(700, 24, 32);
   margin-left: 13px;
 }
 
 .overviewContext {
-  font-family: "Poppins", sans-serif;
+  
   @include _font(400, 14, 18);
   color: $colorGray;
   margin-left: 13px;
 }
 
 .paragraph {
-  font-family: "Poppins", sans-serif;
+  
   @include _font(500, 16, 24);
   text-align: center;
   color: $colorGray;
