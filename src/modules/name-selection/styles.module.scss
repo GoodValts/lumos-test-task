@@ -29,6 +29,10 @@
   border-radius: 16px;
   padding: 32px 10px;
   margin: 14px auto;
+
+  @include _hover {
+    cursor: pointer;
+  }
 }
 
 .radioButton {
