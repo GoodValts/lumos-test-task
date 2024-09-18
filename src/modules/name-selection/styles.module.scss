@@ -12,7 +12,6 @@
 }
 
 .title {
-  
   @include _font(700, 28, 34);
   text-transform: uppercase;
 
@@ -51,7 +50,6 @@
 }
 
 .name {
-  
   @include _font(600, 16, 24);
   margin: 0 8px;
 }
@@ -59,7 +57,7 @@
 .button {
   display: block;
   width: 100%;
-  
+
   @include _font(700, 24, 32);
   color: $colorWhite;
   background-color: $colorOrange;

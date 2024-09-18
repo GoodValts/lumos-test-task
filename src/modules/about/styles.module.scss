@@ -44,7 +44,7 @@
   width: 396px;
   max-width: 100%;
   box-sizing: border-box;
-  
+
   @include _font(700, 24, 32);
   color: $colorWhite;
   background-color: $colorOrange;
@@ -78,7 +78,6 @@
 }
 
 .achievementsText {
-  
   @include _font(400, 14, 18);
   text-align: center;
   color: $colorBlue;
@@ -125,20 +124,17 @@
 }
 
 .overviewAmount {
-  
   @include _font(700, 24, 32);
   margin-left: 13px;
 }
 
 .overviewContext {
-  
   @include _font(400, 14, 18);
   color: $colorGray;
   margin-left: 13px;
 }
 
 .paragraph {
-  
   @include _font(500, 16, 24);
   text-align: center;
   color: $colorGray;

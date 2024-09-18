@@ -1,5 +1,4 @@
 import styles from "./styles.module.scss";
-import headerIcon from "../../assets/icons/header-icon.png";
 import { Dispatch, SetStateAction, useState } from "react";
 import noticeIcon from "../../assets/icons/notice-icon.png";
 import closeIcon from "../../assets/icons/close-icon.png";
@@ -59,11 +58,11 @@ export default function Form({
             ? styles.button
             : `${styles.button} ${styles.button_disabled}`
         }
-        onClick={() => {
+        onClick={() =>
           mail
             ? console.log("mail:", mail)
-            : console.log("disabled button click, incorrect mail");
-        }}
+            : console.log("disabled button click, incorrect mail")
+        }
       >
         Continue
       </button>

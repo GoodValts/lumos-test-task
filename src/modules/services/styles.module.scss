@@ -50,7 +50,6 @@
 }
 
 .title {
-  
   @include _font(700, 28, 34);
   text-align: center;
   text-transform: uppercase;
@@ -67,7 +66,6 @@
 }
 
 .description {
-  
   @include _font(600, 16, 24);
   text-align: center;
   color: $colorGray;
@@ -75,7 +73,6 @@
 }
 
 .paragraph {
-  
   @include _font(700, 24, 32);
   text-align: center;
   color: $colorBlue;

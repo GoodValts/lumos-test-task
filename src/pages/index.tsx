@@ -1,22 +1,10 @@
 import Head from "next/head";
-import localFont from "next/font/local";
 import Header from "@/modules/header/header";
 import { useState } from "react";
 import About from "@/modules/about/about";
 import Services from "@/modules/services/services";
 import NameSelection from "@/modules/name-selection/nameSelection";
 import Form from "@/modules/form/form";
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 
 export default function Home() {
   const [isForm, setIsForm] = useState(false);
