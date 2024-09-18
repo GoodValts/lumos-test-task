@@ -24,7 +24,7 @@ const overviewData: {
 
 export default function About() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="about">
       <h3 className={styles.title}>
         Access{" "}
         <span className={styles.title_blue}>

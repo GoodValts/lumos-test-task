@@ -8,7 +8,7 @@ export default function NameSelection() {
   const [selected, setSelected] = useState("Name1 Surname1");
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="vpn">
       <p className={styles.title}>
         Choose <span className={styles.title_blue}>your name</span>
       </p>
