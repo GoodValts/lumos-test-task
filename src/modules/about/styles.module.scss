@@ -1,0 +1,148 @@
+@import "../../styles/general";
+
+.section {
+  max-width: 892px;
+  margin: auto;
+  margin-top: 75px;
+  padding: 0 16px;
+  overflow: hidden;
+  position: relative;
+
+  @include _mobile {
+    margin-top: 10px;
+  }
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  @include _font(700, 32, 46);
+  text-align: center;
+  color: $colorBlack;
+  margin: 0 auto;
+  margin-bottom: 0px;
+
+  &_blue {
+    color: $colorBlue;
+  }
+
+  @include _mobile {
+    margin-top: 0px;
+  }
+}
+
+.image {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  margin: 0 auto;
+  padding-left: 30px;
+  bottom: 8px;
+}
+
+.button {
+  display: block;
+  width: 396px;
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+  @include _font(700, 24, 32);
+  color: $colorWhite;
+  background-color: $colorOrange;
+  border: 0px;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0 auto;
+  margin-top: 8px;
+
+  @include _hover {
+    cursor: pointer;
+  }
+}
+
+.achievements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.achievementsImage {
+  width: 22px;
+  height: 42px;
+
+  &_left {
+    transform: scaleX(-1);
+  }
+}
+
+.achievementsText {
+  font-family: "Poppins", sans-serif;
+  @include _font(400, 14, 18);
+  text-align: center;
+  color: $colorBlue;
+  margin: 0 8px;
+
+  &_bold {
+    font-weight: 600;
+  }
+}
+
+.overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  margin-top: 24px;
+}
+
+.overviewContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 415px;
+  margin: 15px 42px;
+}
+
+.overviewSeparator {
+  width: 1px;
+  height: 32px;
+  background-color: $colorGray;
+}
+
+.overviewBlock {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, auto);
+}
+
+.overviewImage {
+  grid-row: 1/3;
+  width: 24px;
+  height: 24px;
+}
+
+.overviewAmount {
+  font-family: "Poppins", sans-serif;
+  @include _font(700, 24, 32);
+  margin-left: 13px;
+}
+
+.overviewContext {
+  font-family: "Poppins", sans-serif;
+  @include _font(400, 14, 18);
+  color: $colorGray;
+  margin-left: 13px;
+}
+
+.paragraph {
+  font-family: "Poppins", sans-serif;
+  @include _font(500, 16, 24);
+  text-align: center;
+  color: $colorGray;
+  margin-top: 24px;
+
+  &_blue {
+    color: $colorBlue;
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../styles/general";
+
+.section {
+  max-width: 892px;
+  margin: auto;
+  margin-top: 72px;
+  padding: 0 16px;
+
+  @include _mobile {
+    margin-top: 40px;
+  }
+}
+
+.serviceContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 32px;
+
+  @include _mobile {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+}
+
+.serviceBlock {
+  max-width: 424px;
+  padding: 16px 0;
+  border-top: 1px $colorGray solid;
+
+  &:nth-last-child(-n + 2) {
+    border-bottom: 1px $colorGray solid;
+  }
+
+  @include _mobile {
+    &:nth-last-child(-n + 2) {
+      border-bottom: 0px;
+    }
+
+    &:last-child {
+      border-bottom: 1px $colorGray solid;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  width: 104px;
+  height: 52px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  @include _font(700, 28, 34);
+  text-align: center;
+  text-transform: uppercase;
+  color: $colorBlue;
+  margin-top: 8px;
+
+  &_orange {
+    color: $colorOrange;
+  }
+
+  @include _mobile {
+    margin-top: 16px;
+  }
+}
+
+.description {
+  font-family: "Poppins", sans-serif;
+  @include _font(600, 16, 24);
+  text-align: center;
+  color: $colorGray;
+  margin-top: 8px;
+}
+
+.paragraph {
+  font-family: "Poppins", sans-serif;
+  @include _font(700, 24, 32);
+  text-align: center;
+  color: $colorBlue;
+  margin-top: 72px;
+
+  @include _mobile {
+    margin-top: 36px;
+  }
+}

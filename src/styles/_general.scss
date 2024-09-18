@@ -1,0 +1,26 @@
+$colorBlue: #3177f2;
+$colorOrange: #ff5d17;
+$colorOrangeHovered: #ff8317;
+$colorBlack: #2b2b2b;
+$colorGray: #646464;
+$colorWhite: #ffffff;
+
+@mixin _font($fontWeight, $fontSize, $lineHeight) {
+  font-weight: $fontWeight;
+  font-size: #{$fontSize}px;
+  line-height: #{$lineHeight}px;
+}
+
+@mixin _hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin _mobile {
+  @media (max-width: 891.98px) {
+    @content;
+  }
+}
