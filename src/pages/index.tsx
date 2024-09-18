@@ -5,6 +5,7 @@ import { useState } from "react";
 import About from "@/modules/about/about";
 import Services from "@/modules/services/services";
 import NameSelection from "@/modules/name-selection/nameSelection";
+import Form from "@/modules/form/form";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -18,7 +19,8 @@ import NameSelection from "@/modules/name-selection/nameSelection";
 // });
 
 export default function Home() {
-  const [isModal, setIsModal] = useState(false);
+  const [isForm, setIsForm] = useState(true);
+  const [name, setName] = useState("");
 
   return (
     <>
@@ -30,10 +32,14 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <About />
-        {/* {isModal && } */}
-        <Services />
-        <NameSelection />
+        {!isForm && (
+          <>
+            <About />
+            <Services />
+            <NameSelection setIsForm={setIsForm} setName={setName} />
+          </>
+        )}
+        {isForm && <Form name={name} setIsForm={setIsForm} />}
       </main>
     </>
   );

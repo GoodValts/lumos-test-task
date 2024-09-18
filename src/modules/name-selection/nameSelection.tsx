@@ -1,8 +1,14 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import radiobuttonIcon from "../../assets/icons/radiobutton-icon.png";
 
-export default function NameSelection() {
+export default function NameSelection({
+  setIsForm,
+  setName,
+}: {
+  setIsForm: Dispatch<SetStateAction<boolean>>;
+  setName: Dispatch<SetStateAction<string>>;
+}) {
   const [selected, setSelected] = useState("");
   const [names, setNames] = useState<string[]>();
 
@@ -15,7 +21,7 @@ export default function NameSelection() {
           .then((res) => {
             const arr = res.map(
               (el: { name: { first: string; last: string } }) =>
-                el.name.first.concat(` ${el.name.last}`),
+                el.name.first.concat(` ${el.name.last}`)
             );
             setNames(arr);
           });
@@ -28,7 +34,7 @@ export default function NameSelection() {
   }, []);
 
   return (
-    <section className={styles.section} id="vpn">
+    <section className={styles.section}>
       {names && (
         <p className={styles.title}>
           Choose <span className={styles.title_blue}>your name</span>
@@ -55,7 +61,17 @@ export default function NameSelection() {
             <div className={styles.name}>{el}</div>
           </div>
         ))}
-      <button className={styles.button}>Get VPN</button>
+      <button
+        className={styles.button}
+        onClick={() => {
+          if (selected) {
+            setName(selected);
+            setIsForm(true);
+          }
+        }}
+      >
+        Get VPN
+      </button>
     </section>
   );
 }

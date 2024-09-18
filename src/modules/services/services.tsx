@@ -57,7 +57,9 @@ export default function Services() {
           </div>
         ))}
       </div>
-      <p className={styles.paragraph}>Millions of people trust us!</p>
+      <p className={styles.paragraph} id="vpn">
+        Millions of people trust us!
+      </p>
     </section>
   );
 }

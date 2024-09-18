@@ -37,7 +37,9 @@ export default function About() {
         VPN
       </h3>
       <img className={styles.image} src={aboutImage.src} alt="about-image" />
-      <button className={styles.button}>Get VPN</button>
+      <a className={styles.button} href="#vpn">
+        Get VPN
+      </a>
       <div className={styles.achievements}>
         <img
           className={styles.achievementsImage}
