@@ -1,0 +1,100 @@
+@import "../../styles/general";
+
+.section {
+  max-width: 892px;
+  margin: auto;
+  padding: 0 16px;
+  padding-top: 100px;
+
+  @include _mobile {
+    padding-top: 82px;
+  }
+}
+
+.return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+
+  @include _hover {
+    cursor: pointer;
+  }
+}
+
+.title {
+  @include _font(700, 28, 34);
+  text-transform: uppercase;
+  border-bottom: 1px solid $colorGray;
+  padding: 16px 0;
+}
+
+.name {
+  @include _font(500, 16, 24);
+  border-bottom: 1px solid $colorGray;
+  padding: 16px 0;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid $colorGray;
+  color: $colorGray;
+
+  @include _font(500, 16, 24);
+  border-radius: 16px;
+  background-color: #f8f8f8;
+  padding: 16px;
+  margin-top: 16px;
+
+  &::placeholder {
+    color: #b5b5b5;
+  }
+}
+
+.notice {
+  display: flex;
+  margin-top: 8px;
+}
+
+.noticeImage {
+  width: 16px;
+  height: 16px;
+}
+
+.noticeText {
+  color: $colorGray;
+
+  @include _font(500, 13, 18);
+  margin-left: 8px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+
+  @include _font(700, 24, 32);
+  color: $colorWhite;
+  background-color: $colorOrange;
+  border: 0px;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 40px auto;
+
+  &_disabled {
+    background-color: $colorGray;
+  }
+
+  @include _hover {
+    cursor: pointer;
+    background-color: $colorOrangeHovered;
+
+    &_disabled {
+      background-color: $colorGray;
+    }
+  }
+}

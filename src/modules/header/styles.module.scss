@@ -1,0 +1,43 @@
+@import "../../styles/general";
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: $colorWhite;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.14);
+  padding: 18px 16px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+
+  @include _hover {
+    cursor: pointer;
+  }
+}
+
+.logo__text {
+  @include _font(600, 16, 24);
+}
+
+.headerButton {
+  font-family: "Roboto", sans-serif;
+  @include _font(600, 14, 18);
+  color: $colorWhite;
+  background-color: $colorBlue;
+  border: 0px;
+  border-radius: 20px;
+  padding: 11px 26px;
+
+  @include _hover {
+    cursor: pointer;
+  }
+}
